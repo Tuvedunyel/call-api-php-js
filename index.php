@@ -16,9 +16,18 @@
         if ($data === false) {
             var_dump(curl_error($curl));
         } else {
-
+            $sendingData = $data;
         }
         curl_close($curl);
     ?>
+    <main>
+        <div id="card-container">
+        </div>
+    </main>
+
+    <script>
+        const sendingData = <?php echo $sendingData ?>;
+    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
